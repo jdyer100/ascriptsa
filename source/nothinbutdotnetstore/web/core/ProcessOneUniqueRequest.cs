@@ -2,23 +2,24 @@ using System;
 
 namespace nothinbutdotnetstore.web.core
 {
-  public class ProcessOneUniqueRequest : IProcessOneUniqueRequest
-  {
-      public ProcessOneUniqueRequest()
-      {
-          Action = "ProcessOneUniqueRequestAction";
-      }
-
-      public void run(IContainRequestInformation request)
+    public class ProcessOneUniqueRequest : IProcessOneUniqueRequest
     {
-      throw new NotImplementedException();
-    }
+        public ProcessOneUniqueRequest()
+        {
+            Action = "ProcessOneUniqueRequestAction";
+        }
 
-    public bool can_handle(IContainRequestInformation request)
-    {
-        return request.Action == Action;
+        public void run(IContainRequestInformation request)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool can_handle(IContainRequestInformation request)
+        {
+            return request.Action == Action;
+        }
+
+        public string Action { get; set; }
+
     }
-      public string Action { get; set;  }
- 
-  }
 }
