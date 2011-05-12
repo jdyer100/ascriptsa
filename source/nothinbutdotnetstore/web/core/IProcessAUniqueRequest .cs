@@ -4,6 +4,5 @@ namespace nothinbutdotnetstore.web.core
     {
         void run(IContainRequestInformation request);
         bool can_handle(IContainRequestInformation request);
-        string Action { get; set; }
     }
 }

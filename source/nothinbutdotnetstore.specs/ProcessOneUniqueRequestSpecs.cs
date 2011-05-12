@@ -1,3 +1,4 @@
+using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.rhinomocks;
 using Machine.Specifications;
 using nothinbutdotnetstore.web.core;
@@ -17,8 +18,8 @@ namespace nothinbutdotnetstore.specs
     {
       public class and_it_can_proces_it : when_determining_if_it_can_process_a_request
       {
-        Establish c = () => { request = fake.an<IContainRequestInformation>();
-                                request.Action = "ProcessOneUniqueRequestAction";
+        Establish c = () => { request = depends.on<IContainRequestInformation>();
+                                request.setup(x => x.action).Return("ProcessOneUniqueRequestAction");
         };
 
         Because b = () =>
