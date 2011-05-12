@@ -4,6 +4,8 @@ namespace nothinbutdotnetstore.web.core
 {
   public class ProcessOneUniqueRequest : IProcessOneUniqueRequest
   {
+    string Action = "ProcessOneUniqueRequestAction";
+
     public void run(IContainRequestInformation request)
     {
       throw new NotImplementedException();
@@ -11,7 +13,7 @@ namespace nothinbutdotnetstore.web.core
 
     public bool can_handle(IContainRequestInformation request)
     {
-      return true;
+        return request.Action == Action;
     }
   }
 }
