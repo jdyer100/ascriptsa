@@ -5,9 +5,9 @@ using System.Text;
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
-    public static class StubFactory<T> where T: new()
+    public static class Stub<T> where T: new()
     {
-        public static T Create()
+        public static T with()
         {
             return new T();
         }
