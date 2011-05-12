@@ -44,6 +44,7 @@ namespace nothinbutdotnetstore.specs
             static IContainRequestInformation request;
             static IList<IProcessOneUniqueRequest> all_possible_commands;
         }
+
         public class when_attempting_to_find_a_handler_and_it_does_not_have_it : concern
         {
 
