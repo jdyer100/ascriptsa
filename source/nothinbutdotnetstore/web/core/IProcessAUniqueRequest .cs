@@ -4,4 +4,5 @@ namespace nothinbutdotnetstore.web.core
     {
         bool can_handle(IContainRequestInformation request);
     }
+
 }

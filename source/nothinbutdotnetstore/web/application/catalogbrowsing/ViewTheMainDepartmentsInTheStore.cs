@@ -9,5 +9,10 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
     {
       throw new NotImplementedException();
     }
+
+      public IView results
+      {
+          get { throw new NotImplementedException(); }
+      }
   }
 }

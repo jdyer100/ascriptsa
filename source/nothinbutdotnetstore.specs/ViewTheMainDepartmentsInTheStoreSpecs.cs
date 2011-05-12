@@ -24,9 +24,13 @@ namespace nothinbutdotnetstore.specs
         sut.run(request);
 
 
-      It should_blah = () => { };
+      It return_a_view_of_departments = () =>
+      {
+          result = sut.results;
+      };
 
       static IContainRequestInformation request;
+        static IView result;
     }
   }
 }
