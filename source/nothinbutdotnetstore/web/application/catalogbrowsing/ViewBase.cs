@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using nothinbutdotnetstore.web.application.stubs;
 using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.application.catalogbrowsing
 {
@@ -8,6 +10,8 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
     {
         protected IFindInformationInTheStoreCatalog information_in_the_store_catalog_repository;
         protected IDisplayReportModels report_engine;
+
+        protected ViewBase(): this(new StubInformationInTheStoreCatalogRepository(), new StubReportEngine()) { }
 
         protected ViewBase(IFindInformationInTheStoreCatalog information_in_the_store_catalog_repository, IDisplayReportModels report_engine)
         {
@@ -17,7 +21,6 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
 
         public virtual void run(IContainRequestInformation request)
         {
-
         }
 
         protected void displayResults<T>(IEnumerable<T> results)
